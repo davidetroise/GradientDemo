@@ -10,13 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+//            LinearGradient(colors: [.orange, .purple, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
+//            AngularGradient(colors: [.red, .green, .blue, .purple, .pink], center: .center)
+//            RadialGradient(colors: [.black, .white, .black, .white, .black, .white, .black, .white], center: .center, startRadius: 20, endRadius: 500)
+            EllipticalGradient(colors: [.purple, .yellow, .blue])
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                Text("Hello, world!")
+                    .fontWeight(.heavy)
+            }
+            .foregroundColor(.white)
+            .padding()
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
